@@ -7,5 +7,5 @@ The project is made up of single modules that are explained below.
 
 | Module | Description |
 | ------------- | ------------- |
-| [00_Preparation](../../../tree/master/Terraform/00_Preparation) | initial Terraform configuration |
-| [01_Deployment](../../../tree/master/Terraform/01_Deployment) | demo deployment of a Linux VM and creation of all dependend resources |
+| [00_Preparation](../../../tree/master/11-2019-ExpertsLiveEU/00_Preparation) | initial Terraform configuration |
+| [01_Deployment](../../../tree/master/11-2019-ExpertsLiveEU/01_Deployment) | demo deployment of a Linux VM and creation of all dependend resources |
