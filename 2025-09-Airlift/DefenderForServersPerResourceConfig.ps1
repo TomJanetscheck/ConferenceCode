@@ -1,6 +1,6 @@
 ### basic configuration
 $token = (Get-AzAccessToken -AsSecureString).token
-$subscriptionId = "[yourSubscriptionId]"
+$subscriptionId = read-host "Please enter your Azure subscription ID"
 
 
 ### Read subscription-wide setting
