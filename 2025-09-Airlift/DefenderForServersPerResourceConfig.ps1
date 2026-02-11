@@ -1,7 +1,8 @@
 ### basic configuration
 $token = (Get-AzAccessToken -AsSecureString).token
 $subscriptionId = read-host "Please enter your Azure subscription ID"
-
+$resourceGroupName = read-host "Please enter your Azure resource group name"
+$machineName = read-host "Please enter your Azure VM name"
 
 ### Read subscription-wide setting
 $pricingUrlSubscription = "https://management.azure.com/subscriptions/" + $subscriptionId + "/providers/Microsoft.Security/pricings/virtualMachines?api-version=2024-01-01"
@@ -10,7 +11,7 @@ $result1.properties
 
 
 ### Read individual machine setting
-$machineId = $subscriptionId + "/resourceGroups/Airlift/providers/Microsoft.Compute/virtualMachines/Win2022Demo"
+$machineId = $subscriptionId + "/resourceGroups/" + $resourceGroupName + "/providers/Microsoft.Compute/virtualMachines/" + $machineName
 $pricingUrlMachine = "https://management.azure.com/subscriptions/" + $machineId + "/providers/Microsoft.Security/pricings/virtualMachines?api-version=2024-01-01"
 $result2 = Invoke-RestMethod -Method Get -Uri $pricingUrlMachine -Token $token -Authentication Bearer
 $result2.properties
