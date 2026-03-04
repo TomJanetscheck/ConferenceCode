@@ -1,4 +1,5 @@
 ### basic configuration
+Connect-AzAccount
 $token = (Get-AzAccessToken -AsSecureString).token
 $subscriptionId = read-host "Please enter your Azure subscription ID"
 $resourceGroupName = read-host "Please enter your Azure resource group name"
